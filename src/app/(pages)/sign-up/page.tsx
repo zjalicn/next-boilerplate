@@ -1,6 +1,8 @@
 import * as React from "react";
 import { SignUpForm } from "@/components/SignUpForm";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import Link from "next/link";
+import { Separator } from "@/components/ui/separator";
 
 export default async function SignUpPage() {
   return (
@@ -11,6 +13,10 @@ export default async function SignUpPage() {
         </CardHeader>
         <CardContent>
           <SignUpForm />
+          <Separator className="mt-4" />
+          <p className="mt-4">
+            Already have an account? <Link href="sign-in">Sign In</Link>
+          </p>
         </CardContent>
       </Card>
     </div>

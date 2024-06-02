@@ -8,8 +8,13 @@ interface SessionProviderProps {
   session: Session | null;
 }
 
-const SessionContext = createContext<SessionProviderProps>(
-  {} as SessionProviderProps
+const defaultSessionProviderProps = {
+  user: null,
+  session: null,
+};
+
+const SessionContext = createContext<SessionProviderProps | undefined>(
+  defaultSessionProviderProps
 );
 
 export const useSession = () => {

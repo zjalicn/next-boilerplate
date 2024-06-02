@@ -16,7 +16,8 @@ import { Input } from "@/components/ui/input";
 import { SignUpSchema } from "@/types";
 import { signUp } from "../actions/auth.actions";
 import { toast } from "@/components/ui/use-toast";
-import { redirect, useRouter } from "next/navigation";
+import { useRouter } from "next/navigation";
+import { Separator } from "@/components/ui/separator";
 
 export function SignUpForm() {
   const router = useRouter();
@@ -43,12 +44,12 @@ export function SignUpForm() {
         description: "Account created successfully",
       });
 
-      redirect("/dashboard");
+      router.push("/dashboard");
     }
   }
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-2">
+      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
         <FormField
           control={form.control}
           name="username"

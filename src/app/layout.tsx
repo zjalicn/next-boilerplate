@@ -19,16 +19,11 @@ export default async function RootLayout({
 }>) {
   const sessionData = await validateRequest();
 
-  if (!sessionData.user) {
-    return redirect("sign-in");
-  }
-
   return (
     <html lang="en" suppressHydrationWarning>
       <head />
       <body className={cn("font-sans", fontSans.variable)}>
         <SessionProvider value={sessionData}>
-          <Header />
           {children}
           <Toaster />
         </SessionProvider>

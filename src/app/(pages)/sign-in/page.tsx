@@ -1,6 +1,8 @@
 import { SignInForm } from "@/components/SignInForm";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Separator } from "@/components/ui/separator";
 import { validateRequest } from "@/lib/lucia";
+import Link from "next/link";
 import { redirect } from "next/navigation";
 import * as React from "react";
 
@@ -19,6 +21,10 @@ export default async function SignUpPage() {
         </CardHeader>
         <CardContent>
           <SignInForm />
+          <Separator className="mt-4" />
+          <p className="mt-4">
+            Don't have an account? <Link href="sign-up">Sign Up</Link>
+          </p>
         </CardContent>
       </Card>
     </div>
