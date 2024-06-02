@@ -16,7 +16,7 @@ import { Input } from "@/components/ui/input";
 import { SignUpSchema } from "@/types";
 import { signUp } from "../actions/auth.actions";
 import { toast } from "@/components/ui/use-toast";
-import { useRouter } from "next/navigation";
+import { redirect, useRouter } from "next/navigation";
 
 export function SignUpForm() {
   const router = useRouter();
@@ -43,7 +43,7 @@ export function SignUpForm() {
         description: "Account created successfully",
       });
 
-      router.push("/");
+      redirect("/dashboard");
     }
   }
   return (

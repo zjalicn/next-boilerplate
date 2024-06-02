@@ -16,7 +16,7 @@ import { Input } from "@/components/ui/input";
 import { SignInSchema } from "@/types";
 import { signIn } from "../actions/auth.actions";
 import { toast } from "@/components/ui/use-toast";
-import { useRouter } from "next/navigation";
+import { redirect, useRouter } from "next/navigation";
 
 export function SignInForm() {
   const router = useRouter();
@@ -42,7 +42,7 @@ export function SignInForm() {
         description: "Signed in successfully",
       });
 
-      router.push("/");
+      redirect("/dashboard");
     }
   }
   return (
