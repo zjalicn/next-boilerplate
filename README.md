@@ -1,6 +1,6 @@
 - Next 14
 - Lucia Auth
-- Postgre SQL
+- Postgres SQL
 - Drizzle ORM
 - Typescript
 - Tailwind CSS
