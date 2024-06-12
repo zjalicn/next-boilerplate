@@ -13,12 +13,10 @@ export default async function Header() {
       <div>LOGO</div>
       {user && (
         <div className="flex gap-2 items-center">
-          <>
-            {user.id.toString()}
-            <form action={signOut}>
-              <Button type="submit">Sign Out</Button>
-            </form>
-          </>
+          {user.id.toString()}
+          <form action={signOut}>
+            <Button type="submit">Sign Out</Button>
+          </form>
         </div>
       )}
     </div>

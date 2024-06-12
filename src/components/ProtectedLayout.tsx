@@ -2,7 +2,7 @@
 
 import "@/app/globals.css";
 import { useSession } from "@/providers/session-provider";
-import { redirect, useRouter } from "next/navigation";
+import { useRouter } from "next/navigation";
 import { ReactNode } from "react";
 import Header from "./Header";
 
