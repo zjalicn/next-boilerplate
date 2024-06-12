@@ -17,7 +17,6 @@ import { SignUpSchema } from "@/types";
 import { signUp } from "../actions/auth.actions";
 import { toast } from "@/components/ui/use-toast";
 import { useRouter } from "next/navigation";
-import { Separator } from "@/components/ui/separator";
 
 export function SignUpForm() {
   const router = useRouter();
