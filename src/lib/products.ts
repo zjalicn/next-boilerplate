@@ -10,5 +10,4 @@ export const testProducts: ProductType[] = [
   { name: "testProduct3", description: "test description", price: 499 },
   { name: "testProduct4", description: "test description", price: 3199 },
   { name: "testProduct5", description: "test description", price: 3299 },
-  { name: "testProduct6", description: "test description", price: 399 },
 ];
